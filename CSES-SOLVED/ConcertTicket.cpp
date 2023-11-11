@@ -2,53 +2,35 @@
  
 using namespace std; 
  
-int n, m, k; 
- 
- 
-int solve(int a[], int b[]) 
-{
-    int j = 0, i = 0, res = 0; 
-    while(i < n && j < m) 
-    {
-        if(abs(a[i] - b[j]) <= k) 
-        {
-            res++; 
-            i++; 
-            j++; 
-        }
-        else 
-        {
-            if(a[i] - b[j] > k) 
-            {
-                j++;
-            }
-            else
-            {
-                i++;
-            }
-        }
-    }
-    return res; 
-}
+int n, m, p;
  
 int main() 
 {
-    cin >> n >> m >> k; 
-    int a[n];
-    int b[m]; 
+    cin >> n >> m;
+    multiset<int> h; 
  
-    for(int i = 0; i < n; i++) 
+    while(n--)
     {
-        cin >> a[i];
+        cin >> p; 
+        h.insert(p);
     }
  
-    for(int i = 0; i < m; i++)
-    {
-        cin >> b[i];
+    int curr;
+    while(m--) 
+    { 
+        cin >> curr; 
+        auto ctr = h.upper_bound(curr); 
+        
+        if(ctr == h.begin()) 
+        {
+            cout << -1 << '\n'; 
+        }
+        else 
+        {
+            ctr--;
+            cout << *ctr << '\n';
+            h.erase(ctr); 
+        }
     }
  
-    sort(a, a + n); 
-    sort(b, b + m); 
- 
-    cout << solve(a, b);
 }
