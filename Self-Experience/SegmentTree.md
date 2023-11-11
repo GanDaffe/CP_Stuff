@@ -15,7 +15,8 @@ Tại sao dùng `Segment Tree`?
 + Tìm Min, Max trong khoảng.
 + Tìm tổng các phần tử trong khoảng. 
 + Tìm kết quả của phép toán nào đó giữa các phần tử trong một khoảng.
-    ... 
+    ...
+  
 **Segment Tree và các thành phần cơ bản**
 + Segment Tree hay cây phân đoạn về cơ bản là một cây nhị phân đầy đủ.
 + Mỗi Node là biểu diễn cho một đoạn của mảng, đoạn bé nhất bằng 1 (biểu diễn bởi các node lá).
