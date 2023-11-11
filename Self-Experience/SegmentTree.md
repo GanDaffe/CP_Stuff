@@ -26,7 +26,7 @@ Tại sao dùng `Segment Tree`?
 
 **Cài đặt**
 - Đầu tiên ta cần làm rõ số lượng node sẽ có trong tree. Gọi số lượng phần tử trong mảng đầu vào là n, dễ thấy số node cần để tạo nên segment tree sẽ là 2 * n – 1 (Chứng minh thông qua cấp số nhân)
-- Để cho dễ hình dung, ta sẽ cài đặt cây phân đoạn trong 1 bài toán cụ thể: Tìm phần tử max trong các đoạn 1 – 2, 1 – 3, 4 – 7 của mảng {1, 2, 0, 3, 8, 6, 9} 
+- Để cho dễ hình dung, ta sẽ cài đặt cây phân đoạn trong 1 bài toán cụ thể: Tìm phần tử max trong các đoạn của mảng. 
 - Ta sẽ sử dụng vector để lưu các node trong cây, như đã nói, cây sẽ có tổng là 2n – 1 node, trong đó n node sau của vector sẽ lưu các giá trị của mảng ban đầu, còn lại n – 1 node ở nửa trước sẽ lưu max cho các đoạn với độ rộng >= 2, càng về gần với index 0, thì đoạn biểu diễn sẽ càng rộng, chỉ số của root node (max của cả mảng) sẽ nằm tại index 1.
 - Gồm tổng cộng 3 hàm: build(int arr[]), update(int p, int val), query(int l, int r) 
 
