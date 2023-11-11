@@ -9,7 +9,8 @@
 + `Cây nhị phân đầy đủ`:  Là cây nhị phân mà mỗi node trong cây có chính xác 0 hoặc 2 con.
 
 **Tại sao dùng `Segment Tree`?** 
-   Với các bài toán có số lượng phần tử lớn và số lượng query (truy vấn) nhiều, việc duyệt trâu bằng vòng lặp tỏ ra kém hiệu quả vì với mỗi truy vấn ta lại phải duyệt một khoảng trong mảng, điều này khiến độ phức tạp của thuật toán có thể bị đẩy lên O(n2) => Cần tìm ra một CTDL mang lại hiệu quả cao hơn.
+
+   + Với các bài toán có số lượng phần tử lớn và số lượng query (truy vấn) nhiều, việc duyệt trâu bằng vòng lặp tỏ ra kém hiệu quả vì với mỗi truy vấn ta lại phải duyệt một khoảng trong mảng, điều này khiến độ phức tạp của thuật toán có thể bị đẩy lên O(n2) => Cần tìm ra một CTDL mang lại hiệu quả cao hơn.
 
 **Ứng dụng**
 + Tìm Min, Max trong khoảng.
