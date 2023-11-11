@@ -1,1 +1,1 @@
-# CP_Stuff
+Quá trình học CP 🕵️
